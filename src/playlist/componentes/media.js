@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import image from '../../assets/bitcoin.jpg';
 import './media.css';
 
+//prop-types
+import PropTypes from 'prop-types';
+
 class Media extends Component {
     render(){
     const styles = {
@@ -31,6 +34,13 @@ class Media extends Component {
             </div>
         )
     }
+}
+/*Validando tipado en propiedades */
+Media.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string,
+    type: PropTypes.oneOf(['video', 'audio']),
 }
 
 export default Media;

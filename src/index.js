@@ -5,5 +5,5 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 
-render(<Media title="¿Que es bitcoin?" author="Willy Bardales" /> , document.getElementById('root'));
+render(<Media type="video" title="¿Que es bitcoin?" author="Willy Bardales" /> , document.getElementById('root'));
 registerServiceWorker();
