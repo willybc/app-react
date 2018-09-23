@@ -6,6 +6,18 @@ import './media.css';
 import PropTypes from 'prop-types';
 
 class Media extends Component {
+
+    /*  Enlazando evento del DOM
+        constructor(props){
+        super(props)
+        this.handleClick = this.handleClick.bind(this);
+    }
+    */
+
+    /* Enlazando evento del DOM */
+    handleClick = (event) => {
+        console.log(this.props.title);
+    }
     render(){
     const styles = {
         container: {
@@ -20,7 +32,7 @@ class Media extends Component {
 
     console.log(image);
         return(
-            <div className="Media">
+            <div className="Media" onClick={this.handleClick}>
                 <div>
                 <img
                  src={image}
