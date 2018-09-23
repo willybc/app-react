@@ -25,8 +25,8 @@ class Media extends Component {
                  width={260}
                  height={160}
                 />
-                    <h3>¿Por que React</h3>
-                    <p>Willy Bardales</p>
+                    <h3 className="Media-title">{this.props.title}</h3>
+                    <p className="Media-author">{this.props.author}</p>
                 </div>
             </div>
         )
