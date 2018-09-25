@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './media.css';
 
+import { Navbar, Jumbotron, Button , Container , Grid, Row, Col, Clearfix} from 'react-bootstrap';
 //prop-types
 import PropTypes from 'prop-types';
 
@@ -23,19 +23,25 @@ class Media extends Component {
     render(){
 
         return(
-            <div className="Media">
-                <div>
-                <img
-                 src={this.props.cover} 
-                 alt="" 
-                 width={260}
-                 height={160}
-                />
-
-                    <h3 className="Media-title">{this.props.title}</h3>
-                    <p className="Media-author">{this.props.author}</p>
-                </div>
-            </div>
+            <grid>
+                <row className="show-grid">
+                    <col md={2}>
+                        <code>
+                            <div className="Media">                                   
+                                    <img
+                                    src={this.props.cover} 
+                                    alt="" 
+                                    width={260}
+                                    height={160}
+                                    />
+                                    <h3 className="Media-title">{this.props.title}</h3>
+                                    <p className="Media-author">{this.props.author}</p>                                
+                            </div>
+                        </code>
+                    </col>
+                </row>
+               
+            </grid>
         )
     }
 }
