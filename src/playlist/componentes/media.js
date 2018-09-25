@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import image from '../../assets/bitcoin.jpg';
 import './media.css';
 
 //prop-types
@@ -20,36 +19,21 @@ class Media extends Component {
     */
 
     /* Enlazando evento del DOM */
-    handleClick = (event) => {
-        //console.log(this.props.title);
-        this.setState({
-            author: 'Steve Jobs',
-        })
-    }
-    render(){
-    const styles = {
-        container: {
-            fontSize: 14,
-            /*background: 'red',*/
-            color: '#44546b',
-            cursor: 'pointer',
-            width: 260,
-            border: '1px solid red'
-        }
-    }
 
-    console.log(image);
+    render(){
+
         return(
-            <div className="Media" onClick={this.handleClick}>
+            <div className="Media">
                 <div>
                 <img
-                 src={image}
+                 src={this.props.cover} 
                  alt="" 
                  width={260}
                  height={160}
                 />
+
                     <h3 className="Media-title">{this.props.title}</h3>
-                    <p className="Media-author">{this.state.author}</p>
+                    <p className="Media-author">{this.props.author}</p>
                 </div>
             </div>
         )
@@ -57,7 +41,7 @@ class Media extends Component {
 }
 /*Validando tipado en propiedades */
 Media.propTypes = {
-    image: PropTypes.string,
+    cover: PropTypes.string,
     title: PropTypes.string.isRequired,
     author: PropTypes.string,
     type: PropTypes.oneOf(['video', 'audio']),
